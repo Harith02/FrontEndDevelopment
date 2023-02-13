@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+</head>
+<body>
+    <!--Navigation Header-->
+    <nav class="navbar sticky-top navbar-light nav-rest">
+        <div class="navbar-container">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div> 
+        </div>
+        <div class="nav-brand">
+            <a class="navbar-brand img-fluid" href="home.html">
+              <img src="images/logo.png" alt="Bootstrap" width="180" class="d-inline-block align-text-top">
+            </a>
+          </div>  
+        <div class="navLink">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#E8DCD3" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            <a href="account.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#E8DCD3" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                  </svg>
+            </a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#E8DCD3" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+        </div>
+    </nav>
+
+    <div class="right">
+        <br><br><br><br>
+        <div class="search">
+            <input type="text" placeholder="Search..." class="searchInput">
+            <input type="submit" name="search" value="GO" class="search-go">
+        </div>
+    </div>
+
+    <div class="left">
+        <h2>Menu</h2>
+        <ul class="menu">
+            <li><a class="menuItem" href="home.html">Home</a></li>
+            <li><a class="menuItem" href="products.html">Products</a></li>
+            <li><a class="menuItem" href="about.html">About</a></li>
+            <li><a class="menuItem" href="support.html">Support</a></li>
+            <li><a class="menuItem" href="home.html#subscribe">Subscribe</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <div class="cart-modal-overlay">
+            <div class="cart-modal">
+              <i id="close-btn" class="fas fa-times"></i>
+                <h1 class="cart-is-empty">Cart is empty</h1>
+              
+                <div class="product-rows">
+                </div>
+                <div class="total">
+                  <h1 class="cart-total">TOTAL</h1>
+                    <span class="total-price">£0</span>
+                      <button class="purchase-btn">PURCHASE</button>
+                </div>
+            </div>
+        </div>
+
+    <section class="item" id="item">
+        <!--Album Items-->
+        <div class="headAlbum" id="albums">
+            <h2>ALBUMS</h2>
+        </div>
+        <br>
+
+        <audio id="audio">
+            <source src="audio/Harry.mp3" type="audio/mpeg">
+            <source src="audio/sza.mp3" type="audio/mpeg">
+            <source src="audio/weeknd.mp3" type="audio/mpeg">
+            <source src="audio/journals.mp3" type="audio/mpeg">
+            <source src="audio/oncle.mp3" type="audio/mpeg">
+            <source src="audio/hybs.mp3" type="audio/mpeg">
+            <source src="audio/metro.mp3" type="audio/mpeg">
+            <source src="audio/taylor.mp3" type="audio/mpeg">
+            <source src="audio/coldplay.mp3" type="audio/mpeg">
+            <source src="audio/ariana.mp3" type="audio/mpeg">
+            <source src="audio/justice.mp3" type="audio/mpeg">
+            <source src="audio/beetles.mp3" type="audio/mpeg">
+            <source src="audio/nectar.mp3" type="audio/mpeg">
+            <source src="audio/AM.mp3" type="audio/mpeg">
+            <source src="audio/1975.mp3" type="audio/mpeg">
+            <source src="audio/pablo.mp3" type="audio/mpeg">
+        </audio>
+        
+        <div class="items-container">
+            <div class="card-1 card">
+                <img class="product-image" src="images/weeknd.jpg" alt="" data-audio="audio/weeknd.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Dawn FM Album</span>
+                <span class="product-price">£15</span>
+            </div>
+            <div class="card-2 card">
+                <img class="product-image" src="images/harry.jpg" alt="" data-audio="audio/Harry.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Harry's House Album</span>
+                <span class="product-price">£15</span>
+            </div>
+            <div class="card-3 card">
+                <img class="product-image" src="images/sza.JPG" alt="" data-audio="audio/sza.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">SOS Album</span>
+                <span class="product-price">£15</span>
+            </div>
+            <div class="card-4 card">
+                <img class="product-image" src="images/justin.jpg" alt="" data-audio="audio/journals.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Journals Album</span>
+                <span class="product-price">£15</span>
+            </div>
+            <div class="card-5 card">
+                <img class="product-image" src="images/taylor.JPG" alt="" data-audio="audio/taylor.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Midnights Album</span>
+                <span class="product-price">£15</span>
+            </div>
+            <div class="card-6 card">
+                <img class="product-image" src="images/hybs.JPG" alt="" data-audio="audio/hybs.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Making Steak Album</span>
+                <span class="product-price">£15</span>
+            </div>
+            <div class="card-7 card">
+                <img class="product-image" src="images/metro.jpg" alt="" data-audio="audio/metro.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Heroes & Villains Album</span>
+                <span class="product-price">£15</span>
+            </div>
+            <div class="card-8 card">
+                <img class="product-image" src="images/men.JPG" alt=""  data-audio="audio/oncle.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Oncle Jazz Album</span>
+                <span class="product-price">£15</span>
+            </div>
+        </div> 
+        <br>
+    <!--Vinyls Item-->
+        <div class="headVinyl" id="vinyls">
+            <h2>VINYLS</h2>
+        </div>
+        <br>
+        <div class="items-container">
+            <div class="card-1 card">
+                <img class="product-image" src="images/bieber.jpg" alt="" data-audio="audio/justice.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Justice Vinyl</span>
+                <span class="product-price">£25</span>
+            </div>
+            <div class="card-2 card">
+                <img class="product-image" src="images/beetle.jpg" alt="" data-audio="audio/beetles.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Abbey Road Vinyl</span>
+                <span class="product-price">£25</span>
+            </div>
+            <div class="card-3 card">
+                <img class="product-image" src="images/1975.JPG" alt="" data-audio="audio/1975.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">1975 Vinyl</span>
+                <span class="product-price">£30</span>
+            </div>
+            <div class="card-4 card">
+                <img class="product-image" src="images/arctic.JPG" alt="" data-audio="audio/AM.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">AM Vinyl</span>
+                <span class="product-price">£25</span>
+            </div>
+            <div class="card-5 card">
+                <img class="product-image" src="images/pablo.jpg" alt="" data-audio="audio/pablo.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Soy Pablo Vinyl</span>
+                <span class="product-price">£30</span>
+            </div>
+            <div class="card-6 card">
+                <img class="product-image" src="images/coldplay.jpg" alt="" data-audio="audio/coldplay.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Parachutes Vinyl</span>
+                <span class="product-price">£25</span>
+            </div>
+            <div class="card-7 card">
+                <img class="product-image" src="images/ariana.JPG" alt="" data-audio="audio/ariana.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Sweetener Vinyl</span>
+                <span class="product-price">£25</span>
+            </div>
+            <div class="card-8 card">
+                <img class="product-image" src="images/joji.jpg" alt="" data-audio="audio/nectar.mp3">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Nectar Vinyl</span>
+                <span class="product-price">£25</span>
+            </div>
+        </div> 
+        <br>
+    <!--Merch Item-->
+    
+        <div class="headMerch" id="merch">
+            <h2>MERCHANDISE</h2>
+        </div>
+        <br>
+        <div class="items-container">
+            <div class="card-1 card">
+                <img class="product-image" src="images/tshirtblack.jpg" alt="">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Black T-shirt</span>
+                <span class="product-price">£12</span>
+            </div>
+            <div class="card-2 card">
+                <img class="product-image" src="images/tshirtgray.jpg" alt="">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Gray T-shirt</span>
+                <span class="product-price">£12</span>
+            </div>
+            <div class="card-3 card">
+                <img class="product-image" src="images/hoodie.jpg" alt="">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Hoodie</span>
+                <span class="product-price">£16</span>
+            </div>
+            <div class="card-4 card">
+                <img class="product-image" src="images/keychain1.jpg" alt="">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Circle Keychain</span>
+                <span class="product-price">£5</span>
+            </div>
+            <div class="card-5 card">
+                <img class="product-image" src="images/keychain2.jpg" alt="">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Square Keychain</span>
+                <span class="product-price">£5</span>
+            </div>
+            <div class="card-6 card">
+                <img class="product-image" src="images/tote.jpg" alt="">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Tote Bag</span>
+                <span class="product-price">£10</span>
+            </div>
+            <div class="card-7 card">
+                <img class="product-image" src="images/bag.jpg" alt="">
+                <button class="add-to-cart">Add to cart</button>
+                <span class="product-title">Jumbo Tote Bag</span>
+                <span class="product-price">£20</span>
+            </div>
+        </div> 
+        <br>
+     </section>
+    </div>
+
+    <!--Footer-->
+    <footer class=" text-black py-2 text-center">
+        <div class="socials">
+            <!-- Facebook -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i>
+            </a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i>
+            </a>
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i>
+            </a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i>
+            </a>
+            <!-- Github -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-github"></i
+            ></a>
+        </div>
+    </footer>
+        <section class="cac">
+             <div class="closing">
+                <div class="contact">
+                    <h5>CONTACT US:
+                        <br>
+                        <a href="mailto:l38985942@student.ua92.ac.uk" id="email">l38985942@student.ua92.ac.uk</a>
+                    </h5>
+                </div>
+                <div class="copyright">
+                    <h3>&copy; 2023 BADUMTSS</h3>
+                </div>
+            </div>
+        </section>
+    <script src="myscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
