@@ -1,4 +1,4 @@
-**FrontEndDevelopment**
+#FrontEndDevelopment Badumtss E-commerce Website
 🎓 First-Year University Project – Frontend Web Development
 
 This repository contains my first ever frontend development project, created as part of my university coursework. The project helped me learn and practice the fundamentals of HTML, CSS, and JavaScript. It is a fully static website with no backend integration.
